@@ -1,5 +1,3 @@
-<!-- maluti_school_system/index.php -->
-
 <?php
 session_start();
 
