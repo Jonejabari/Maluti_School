@@ -1,0 +1,10 @@
+/vendor/
+/node_modules/
+*.log
+*.env
+.DS_Store
+Thumbs.db
+config.php
+db.php
+*.sql
+db_data/
