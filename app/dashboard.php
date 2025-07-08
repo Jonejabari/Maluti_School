@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'db.php';
+require 'includes/db.php';
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
@@ -19,9 +19,6 @@ $username = $_SESSION['username'];
         body { font-family: Arial, sans-serif; padding: 20px; }
         .card { border: 1px solid #ccc; border-radius: 8px; padding: 15px; margin: 10px 0; }
     </style>
-</head>
-<body>
-    <h2>Welcome, <?php echo ucfirst($username); ?> 👋</h2>
     <p>You are logged in as <strong><?php echo $role; ?></strong></p>
 
     <?php if ($role == 'admin'): ?>

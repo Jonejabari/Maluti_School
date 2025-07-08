@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'includes/db.php'; // we’ll create this next
+include 'includes/db.php';
 
 $username = $_POST['username'];
 $password = $_POST['password'];
