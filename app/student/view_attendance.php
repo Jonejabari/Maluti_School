@@ -2,7 +2,8 @@
 session_start();
 include '../includes/db.php';
 
-$student_id = $_SESSION['role'] === 'student' ? $_SESSION['student_id'] : $_GET['student_id'] ?? 0;
+// $student_id = $_SESSION['role'] === 'student' ? $_SESSION['student_id'] : $_GET['student_id'] ?? 0;
+$student_id = ($_SESSION['role'] === 'student') ? $_SESSION['user_id'] : ($_GET['student_id'] ?? 0);
 
 if (!$student_id) {
     echo "No student selected.";
