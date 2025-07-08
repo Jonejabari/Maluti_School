@@ -4,7 +4,7 @@ if ($_SESSION['role'] !== 'admin') {
     header("Location: ../login.php");
     exit();
 }
-include '../includes/db.php';
+include('../includes/db.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['full_name'];

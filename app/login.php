@@ -1,4 +1,3 @@
-<!-- login.php -->
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
@@ -17,6 +16,9 @@
 
         <label>Password:</label><br>
         <input type="password" name="password" required><br><br>
+
+        <p><a href="forgot_password.php">Forgot Password?</a></p>
+
 
         <input type="submit" value="Login">
     </form>

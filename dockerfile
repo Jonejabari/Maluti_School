@@ -10,7 +10,7 @@ RUN docker-php-ext-install mysqli
 # Enable Apache rewrite if needed
 RUN a2enmod rewrite
 
-# Copy your PHP app
+# Copy PHP app
 COPY ./app /var/www/html/
 
 # Set working directory
