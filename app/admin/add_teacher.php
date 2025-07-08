@@ -14,11 +14,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $subject = $_POST['subject'];
     $class = $_POST['class_assigned'];
 
-    $stmt = $conn->prepare("INSERT INTO teachers (full_name, gender, email, phone, subject, class_assigned) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssss", $name, $gender, $email, $phone, $subject, $class);
-    $stmt->execute();
+    // Create username from email or name
+    $username = explode('@', $email)[0] ?? strtolower(str_replace(' ', '', $name)) . rand(100, 999);
+    $raw_password = 'pass123'; // default temp password
+    $hashed_password = password_hash($raw_password, PASSWORD_BCRYPT);
 
-    header("Location: teachers.php");
+    // Insert into users table
+    $stmtUser = $conn->prepare("INSERT INTO users (username, password, role) VALUES (?, ?, 'teacher')");
+    $stmtUser->bind_param("ss", $username, $hashed_password);
+    $stmtUser->execute();
+    $user_id = $conn->insert_id;
+
+    // Insert into teachers table
+    $stmtTeacher = $conn->prepare("INSERT INTO teachers (user_id, full_name, gender, email, phone, subject, class_assigned) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmtTeacher->bind_param("issssss", $user_id, $name, $gender, $email, $phone, $subject, $class);
+    $stmtTeacher->execute();
+
+    // Show credentials
+    echo "<h3>✅ Teacher created successfully!</h3>";
+    echo "<p><strong>Username:</strong> $username</p>";
+    echo "<p><strong>Password:</strong> $raw_password</p>";
+    echo "<a href='teachers.php'>⬅️ Back to Teachers</a>";
     exit();
 }
 ?>
