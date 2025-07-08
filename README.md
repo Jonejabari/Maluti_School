@@ -44,5 +44,5 @@ A web-based school management system built for **Maluti Primary School** in Leso
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Jonejabari/school_system.git
-   cd school_system
+   git clone https://github.com/Jonejabari/Maluti_School.git
+   cd Maluti_Scohool
