@@ -21,7 +21,7 @@ if ($result->num_rows === 1) {
 
     $reset_link = "http://yourdomain.com/reset_password.php?token=$token";
 
-    // Email it (for testing you can just display the link)
+    // email it (for testing we can just display the link)
     $_SESSION['forgot_success'] = "A password reset link has been sent to your email.";
     // In real usage, send the $reset_link via email using PHPMailer or mail()
 
