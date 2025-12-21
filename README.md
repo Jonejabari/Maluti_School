@@ -1,36 +1,36 @@
-# 🏫 Maluti School Management System
+# Maluti School Management System
 
 A web-based school management system built for **Maluti Primary School** in Lesotho. This system helps digitize and manage daily school operations including student enrollment, attendance, fee management, communication, and academic reporting.
 
 ---
 
-## 📌 Features
+## Features
 
-### ✅ Core Functionalities
-- **🔐 User Authentication & Role-Based Access**
+### Core Functionalities
+- ** User Authentication & Role-Based Access**
   - Supports Admins, Teachers, Students, and Parents
-- **🎓 Student Management**
+- ** Student Management**
   - Add, update, delete records
   - Assign to classes and manage academic info
-- **👨‍🏫 Teacher Management**
+- ** Teacher Management**
   - Manage profiles and assign subjects/classes
-- **🗓️ Attendance Tracking**
+- ** Attendance Tracking**
   - Mark daily attendance (teachers)
   - View records (students/parents)
-- **📝 Examinations & Report Cards**
+- ** Examinations & Report Cards**
   - Grade input (teachers)
   - Automated report generation
-- **💵 Fee Management**
+- ** Fee Management**
   - Track and record payments
   - Generate invoices and balances
-- **📣 Notifications**
+- ** Notifications**
   - Email/SMS alerts for announcements and reminders
-- **📊 Reports & Analytics**
+- ** Reports & Analytics**
   - View student performance, attendance, and financial summaries
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** PHP
@@ -40,7 +40,7 @@ A web-based school management system built for **Maluti Primary School** in Leso
 
 ---
 
-## 🚀 Getting Started (Local Setup)
+## Getting Started (Local Setup)
 
 1. **Clone the Repository**
    ```bash
